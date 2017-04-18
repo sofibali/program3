@@ -1,4 +1,3 @@
-
 /***
 * Olympic Igloo Scoring Class
 *
@@ -36,10 +35,10 @@ public void recordScores(int s1, int s2, int s3)
 public int overallScore()
 {
    int s;
-   if (score1 < score2)
-      s = score2;
-   else
+   if (score1 <= score2)
       s = score1;
+   else
+      s = score2;
    if (s > score3)
       s = score3;
    s = (score1+score2+score3) - s;   
@@ -59,6 +58,10 @@ public static void main(String args[])
       s3 = Integer.parseInt(args[2]);
    } catch (Exception e) {
       System.err.println("Error: arguments must be integers!");
+      return;
+   }
+   if (s1<0 || s1>50 || s2<0 || s2>50 || s3<0 || s3>50) {
+      System.err.println("Error: scores must be between 0 and 50!");
       return;
    }
    IglooScore1 score = new IglooScore1();

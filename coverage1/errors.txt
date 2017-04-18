@@ -1,0 +1,8 @@
+Errors in IglooScore1: 
+- Did not account for cases of two or more equal scores
+- For the initial if statement the value of s was ssigned reversely, if the case is true s = score1 else s = score2
+- Did not chech for out of bounds values outside of 0 and 50 
+Errors in IglooScore2: 
+- Did not account for cases of two or more  equal scores
+- Included additional else statement that would not be executed  
+- in case two where score2 is tested to be the lowest the value of s2 neded to be score3 not score2

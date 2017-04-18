@@ -36,18 +36,15 @@ public void recordScores(int s1, int s2, int s3)
 public int overallScore()
 {
    int s, s1, s2;
-   if (score1 < score2 && score1 < score3) {
+   if (score1 <= score2 && score1 <= score3) {
       s1 = score2;
       s2 = score3;
-   } else if (score2 < score1 && score2 < score3) {
+   } else if (score2 <= score1 && score2 <= score3) {
+      s1 = score1;
+      s2 = score3;
+   } else{
       s1 = score1;
       s2 = score2;
-   } else if (score3 < score1 && score3 < score2) {
-      s1 = score1;
-      s2 = score2;
-   } else {
-      s1 = 99;
-      s2 = 99;
    }
    s = s1 + s2;
    return s;
